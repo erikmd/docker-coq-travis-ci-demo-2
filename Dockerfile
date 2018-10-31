@@ -2,7 +2,8 @@ FROM coqorg/coq:dev
 
 RUN ["/bin/bash", "--login", "-c", "set -x \
   && opam update -y \
-  && opam install -y -j ${NJOBS} coq-mathcomp-ssreflect"]
+  && opam install -y -j ${NJOBS} coq-mathcomp-ssreflect \
+  && opam clean -a -c -s --logs"]
 
 WORKDIR /home/coq/demo
 
