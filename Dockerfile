@@ -13,4 +13,5 @@ COPY src src
 RUN ["/bin/bash", "--login", "-c", "set -x \
   && sudo chown -R coq:coq /home/coq/demo \
   && coq_makefile -f _CoqProject -o Makefile \
-  && make"]
+  && make \
+  && make install"]
