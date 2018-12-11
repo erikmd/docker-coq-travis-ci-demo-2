@@ -14,11 +14,7 @@ env:
   - COQ_IMAGE="coqorg/coq:8.8"
   - COQ_IMAGE="coqorg/coq:dev"
 
-install: |
-  # Tweak the Dockerfile
-  sed -e "0,/^FROM/{s|\\(^FROM\\s\\).*\$|\\1$COQ_IMAGE|}" -i Dockerfile
-
 script:
 - echo -e "${ANSI_YELLOW}Building Demo...${ANSI_RESET}" && echo -en 'travis_fold:start:script\\r'
-- docker build --pull -t demo .
+- docker build --build-arg=coq_image="${COQ_IMAGE}" --pull -t demo .
 - echo -en 'travis_fold:end:script\\r'

@@ -1,4 +1,5 @@
-FROM coqorg/coq:dev
+ARG coq_image="coqorg/coq:dev"
+FROM ${coq_image}
 
 RUN ["/bin/bash", "--login", "-c", "set -x \
   && opam update -y \
