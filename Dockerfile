@@ -23,5 +23,5 @@ RUN ["/bin/bash", "--login", "-c", "set -x \
   && sudo chown -R coq:coq /home/coq/demo \
   # TODO: update configuration/build step below
   && coq_makefile -f _CoqProject -o Makefile \
-  && make \
+  && make -j ${NJOBS} \
   && make install"]
