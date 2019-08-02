@@ -13,7 +13,7 @@ RUN ["/bin/bash", "--login", "-c", "set -x \
   && if [ -n \"${COMPILER_EDGE}\" ]; then opam switch ${COMPILER_EDGE} && eval $(opam env); fi \
   && opam update -y \
   # TODO: specify dependencies below
-  && opam install -y -j ${NJOBS} coq-mathcomp-ssreflect \
+  && opam install -y -v -j ${NJOBS} coq-mathcomp-ssreflect \
   && opam config list && opam repo list && opam list \
   && opam clean -a -c -s --logs"]
 
