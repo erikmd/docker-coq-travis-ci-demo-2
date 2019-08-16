@@ -6,6 +6,7 @@ services:
 
 env:
   matrix:
+  # TODO: remove unneeded versions below
   - COQ_IMAGE="coqorg/coq:8.4"
   - COQ_IMAGE="coqorg/coq:8.5"
   - COQ_IMAGE="coqorg/coq:8.6"
