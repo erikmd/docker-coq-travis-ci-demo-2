@@ -13,6 +13,7 @@ env:
   - COQ_IMAGE="coqorg/coq:8.7"
   - COQ_IMAGE="coqorg/coq:8.8"
   - COQ_IMAGE="coqorg/coq:8.9"
+  - COQ_IMAGE="coqorg/coq:8.10"
   - COQ_IMAGE="coqorg/coq:dev"
    # "default" switch: $COMPILER
    # used switch: $COMPILER_EDGE (cf. Dockerfile: "opam switch" command)
